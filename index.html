@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Password Saver</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f4f6fb;
+      color: #1a1a2e;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #0d1b2e;
+      color: #fff;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    header .icon { font-size: 48px; margin-bottom: 12px; }
+    header h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+    header p { color: #8ab4d4; font-size: 15px; }
+
+    main {
+      max-width: 740px;
+      margin: 48px auto;
+      padding: 0 24px 64px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px 36px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+      margin-bottom: 24px;
+    }
+
+    .summary {
+      background: #0f3460;
+      color: #fff;
+      border-radius: 12px;
+      padding: 28px 36px;
+      margin-bottom: 24px;
+      font-size: 17px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f3460;
+      margin-bottom: 12px;
+    }
+
+    p { font-size: 15px; color: #333; margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul { padding-left: 20px; margin-bottom: 10px; }
+    li { font-size: 15px; color: #333; margin-bottom: 6px; }
+
+    .check { color: #27ae60; font-weight: 700; margin-right: 6px; }
+    .cross  { color: #e74c3c; font-weight: 700; margin-right: 6px; }
+
+    .table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    .table th, .table td { text-align: left; padding: 10px 12px; font-size: 14px; border-bottom: 1px solid #eee; }
+    .table th { background: #f4f6fb; font-weight: 600; color: #555; }
+    .table tr:last-child td { border-bottom: none; }
+
+    footer {
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+      padding: 24px;
+      border-top: 1px solid #e0e4ef;
+    }
+
+    a { color: #0f3460; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="icon">🔐</div>
+  <h1>Privacy Policy</h1>
+  <p>Password Saver Chrome Extension</p>
+</header>
+
+<main>
+
+  <div class="summary">
+    Password Saver collects zero data.<br>
+    Everything stays on your device. Always.
+  </div>
+
+  <div class="card">
+    <h2>What data we collect</h2>
+    <p><span class="cross">✗</span>We do not collect any personal data.</p>
+    <p><span class="cross">✗</span>We do not collect usage data or analytics.</p>
+    <p><span class="cross">✗</span>We do not collect crash reports or telemetry.</p>
+    <p><span class="cross">✗</span>We do not use tracking pixels, cookies, or fingerprinting.</p>
+    <p><span class="cross">✗</span>We do not have a server. There is no backend.</p>
+  </div>
+
+  <div class="card">
+    <h2>How your data is stored</h2>
+    <p>All credentials you save are stored <strong>locally on your device</strong> inside Chrome's sandboxed extension storage. No data is ever transmitted over the network.</p>
+
+    <table class="table" style="margin-top:16px">
+      <thead>
+        <tr><th>Data</th><th>Where</th><th>When cleared</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Encrypted credentials</td>
+          <td><code>chrome.storage.local</code></td>
+          <td>When you delete them</td>
+        </tr>
+        <tr>
+          <td>Session key</td>
+          <td><code>chrome.storage.session</code></td>
+          <td>When the browser closes</td>
+        </tr>
+        <tr>
+          <td>Master password</td>
+          <td>Never stored</td>
+          <td>Discarded immediately after key derivation</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Encryption</h2>
+    <p>Credentials are encrypted using <strong>AES-256-GCM</strong> before being written to storage. The encryption key is derived from your master password using <strong>PBKDF2 with 100,000 iterations and SHA-256</strong>.</p>
+    <p>Your master password is never stored anywhere — not in memory, not on disk, not on any server. Only you can decrypt your data.</p>
+  </div>
+
+  <div class="card">
+    <h2>Third parties</h2>
+    <p>Password Saver has <strong>no third-party dependencies</strong>. It does not load any external scripts, fonts, images, or resources. It makes no network requests of any kind.</p>
+  </div>
+
+  <div class="card">
+    <h2>Permissions used</h2>
+    <ul>
+      <li><strong>storage</strong> — to save encrypted credentials locally on your device.</li>
+      <li><strong>notifications</strong> — to prompt you to save a password after a login form is submitted.</li>
+      <li><strong>&lt;all_urls&gt;</strong> — to detect login forms and provide autofill on any website you visit. No page content is read or transmitted.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Questions? Reach out via <a href="https://ko-fi.com/ylamsaou" target="_blank" rel="noopener">ko-fi.com/ylamsaou</a>.</p>
+  </div>
+
+  <p style="text-align:center; color:#aaa; font-size:13px; margin-top:32px">
+    Last updated: May 2026
+  </p>
+
+</main>
+
+<footer>
+  Password Saver · No data collected · No servers · Open &amp; local
+</footer>
+
+</body>
+</html>
